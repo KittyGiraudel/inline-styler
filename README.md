@@ -2,33 +2,7 @@
 
 Inline-Styler is a teeny tiny JavaScript library to easily manipulate the `style` attribute of an element.
 
-## Example
-
-```js
-// <div class="foo" style="color: blue; line-height: 1">…</div>
-
-var node = document.querySelector('.foo')
-var style = node.getAttribute('style')
-var styler = new InlineStyler(style) // Also works fine if there is no style attribute set yet
-
-// Unset a property
-styler.unsetStyle('line-height')
-
-// Set a property
-styler.setStyle('float', 'left')
-
-// Set multiple properties
-styler.setStyle({
-  'color': 'red',
-  'font-size': '100%'
-})
-
-node.setAttribute('style', styler.toString())
-
-// <div class="foo" style="float: left; color: red; font-size: 100%;">…</div>
-```
-
-It should work seamlessly with [Cheerio](https://github.com/cheeriojs/cheerio) on the server-side as well.
+It also works seamlessly with [Cheerio](https://github.com/cheeriojs/cheerio) on the server-side as well.
 
 ## API
 
