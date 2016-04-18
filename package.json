@@ -1,6 +1,7 @@
 {
   "title": "Inline-Styler",
   "name": "inline-styler",
+  "version": "0.1.1",
   "description": "A lightweight interface to manipulate the style attribute",
   "keywords": ["style", "inline", "attribute", "css"],
   "homepage": "https://github.com/HugoGiraudel/inline-styler",
@@ -16,7 +17,6 @@
     "name": "Hugo Giraudel",
     "url": "http://hugogiraudel.com"
   },
-  "version": "0.1.0",
   "main": "index.js",
   "tonicExample": "example.js",
   "scripts": {
