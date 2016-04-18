@@ -69,7 +69,7 @@
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     module.exports = InlineStyler;
   } else {
-    window.InlineStyler = InlineStyler;
+    global.InlineStyler = InlineStyler;
   }
 
 }(this))
