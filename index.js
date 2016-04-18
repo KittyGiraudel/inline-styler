@@ -1,7 +1,7 @@
 (function (global) {
   'use strict'
 
-  const InlineStyler = function (styleAttribute) {
+  var InlineStyler = function (styleAttribute) {
     this.styles = this.parseStyles(styleAttribute || '')
   }
 
@@ -17,10 +17,10 @@
     return styleAttribute
       .split(';')
       .reduce((accumulator, declaration) => {
-        const chunks = declaration.split(/\s*:\s*/)
+        var chunks = declaration.split(/\s*:\s*/)
         if (chunks.length > 1) {
-          const property = chunks[0].trim()
-          const value = chunks[1].trim()
+          var property = chunks[0].trim()
+          var value = chunks[1].trim()
           accumulator[property] = value
         }
         return accumulator
