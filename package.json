@@ -8,6 +8,10 @@
   "bugs": {
     "url": "https://github.com/HugoGiraudel/inline-styler/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoGiraudel/iframify.git"
+  },
   "author": {
     "name": "Hugo Giraudel",
     "url": "http://hugogiraudel.com"
