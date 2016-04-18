@@ -1,0 +1,23 @@
+{
+  "title": "Inline-Styler",
+  "name": "inline-styler",
+  "description": "A lightweight interface to manipulate the style attribute",
+  "keywords": ["style", "inline", "attribute", "css"],
+  "homepage": "https://github.com/HugoGiraudel/inline-styler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HugoGiraudel/inline-styler/issues"
+  },
+  "author": {
+    "name": "Hugo Giraudel",
+    "url": "http://hugogiraudel.com"
+  },
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
