@@ -24,6 +24,19 @@ describe('InlineStyler', () => {
     expect = '50px'
     assert.equal(actual, expect)
   })
+
+  it('setStyles(..)', () => {
+    inlineStyler = new InlineStyler('')
+    inlineStyler.setStyles({'width': '50px', 'height': '100px' })
+
+    actual = inlineStyler.getStyle('width')
+    expect = '50px'
+    assert.equal(actual, expect)
+
+    actual = inlineStyler.getStyle('height')
+    expect = '100px'
+    assert.equal(actual, expect)
+  })
   
   it('unsetStyle(..)', () => {
     inlineStyler = new InlineStyler('width: 50px')
