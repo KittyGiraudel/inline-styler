@@ -18,7 +18,6 @@
     "url": "http://hugogiraudel.com"
   },
   "main": "index.js",
-  "tonicExample": "example.js",
   "scripts": {
     "test": "mocha"
   },
