@@ -6,7 +6,7 @@ It also works seamlessly with [Cheerio](https://github.com/cheeriojs/cheerio) on
 
 ## API
 
-### `hasStyle(property)`
+### `.hasStyle(property)`
 
 Check whether the element has `property` set in its `style` attribute.
 
@@ -33,17 +33,15 @@ var fontSize = styler.getStyle('font-size') // null
 Unset `property` from `style` attribute.
 
 ```js
-// <div style="color: red;">…</div>
 var styler = new InlineStyler(node.getAttribute('style'))
 styler.unsetStyle('color')
 ```
 
-### `.setStyle(property, value)` | `.setStyle(styles)`
+### `.setStyle(property, value)`
 
 Set `property` to `value` in `style` attribute. Override style if it already exists.
 
 ```js
-// <div style="color: red;">…</div>
 var styler = new InlineStyler(node.getAttribute('style'))
 
 // Individual
@@ -54,9 +52,16 @@ styler.setStyle('font-size', '100%')
 styler
   .setStyle('color', 'blue')
   .setStyle('font-size', '100%')
+```
 
-// Grouped
-styler.setStyle({
+### `.setStyles(object)`
+
+Alias for `.setStyle(object)`.
+
+```js
+var styler = new InlineStyler(node.getAttribute('style'))
+
+styler.setStyles({
   'color': 'blue',
   'font-size', '100%'
 })
@@ -71,6 +76,7 @@ Returns the string representation to be set as `style` attribute.
 var styler = new InlineStyler(node.getAttribute('style'))
 styler.setStyle('color', 'blue')
 node.setAttribute('style', styler.toString())
+// <div style="color: blue;">…</div>
 ```
 
 ## Tests
