@@ -16,7 +16,7 @@
   InlineStyler.prototype.parseStyles = function parseStyles (styleAttribute) {
     return styleAttribute
       .split(';')
-      .reduce((accumulator, declaration) => {
+      .reduce(function (accumulator, declaration) {
         var chunks = declaration.split(/\s*:\s*/)
         if (chunks.length > 1) {
           var property = chunks[0].trim()
@@ -59,7 +59,7 @@
 
   InlineStyler.prototype.toString = function () {
     return Object.keys(this.styles)
-      .reduce((accumulator, property) => {
+      .reduce(function (accumulator, property) {
         accumulator.push(property + ': ' + this.styles[property] + ';')
         return accumulator
       }, [])
