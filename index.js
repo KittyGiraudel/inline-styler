@@ -58,9 +58,11 @@
   }
 
   InlineStyler.prototype.toString = function () {
+    var styles = this.styles
+
     return Object.keys(this.styles)
       .reduce(function (accumulator, property) {
-        accumulator.push(property + ': ' + this.styles[property] + ';')
+        accumulator.push(property + ': ' + styles[property] + ';')
         return accumulator
       }, [])
       .join(' ')
