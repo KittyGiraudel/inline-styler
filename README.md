@@ -79,6 +79,20 @@ node.setAttribute('style', styler.toString())
 // <div style="color: blue;">…</div>
 ```
 
+#### Options
+
+```js
+var styler = new InlineStyler(node.getAttribute('style'), {
+  spaceAfterColon: false,
+  spaceAfterSemiColon: false,
+  trailingSemiColon: false
+})
+styler.setStyle('color', 'blue')
+styler.setStyle('background', 'red')
+node.setAttribute('style', styler.toString())
+// <div style="color:blue;background:red">…</div>
+```
+
 ## Tests
 
 ```

@@ -1,8 +1,13 @@
 (function (global) {
   'use strict'
 
-  var InlineStyler = function (styleAttribute) {
+  var InlineStyler = function (styleAttribute, options) {
     this.styles = this.parseStyles(styleAttribute || '')
+    this.options = Object.assign({
+      spaceAfterColon: true,
+      spaceAfterSemiColon: true,
+      trailingSemiColon: true
+    }, options)
   }
 
   InlineStyler.prototype.getStyles = function getStyles () {
@@ -59,13 +64,24 @@
 
   InlineStyler.prototype.toString = function () {
     var styles = this.styles
+    var properties = Object.keys(styles)
+    var propertyValueSeparator = this.options.spaceAfterColon ? ': ' : ':'
+    var declarationSeparator = this.options.spaceAfterSemiColon ? '; ' : ';'
+    var endSeparator = this.options.trailingSemiColon ? ';' : ''
 
-    return Object.keys(this.styles)
-      .reduce(function (accumulator, property) {
-        accumulator.push(property + ': ' + styles[property] + ';')
-        return accumulator
+    return properties
+      .reduce(function (accumulator, property, index) {
+        return accumulator.concat(
+          property
+          + propertyValueSeparator
+          + styles[property]
+          + ((index === properties.length - 1)
+            ? endSeparator
+            : declarationSeparator
+          )
+        )
       }, [])
-      .join(' ')
+      .join('')
   }
 
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {

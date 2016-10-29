@@ -133,5 +133,15 @@ describe('InlineStyler', () => {
     actual = inlineStyler.toString()
     expect = 'width: 50px; height: 100px;'
     assert.equal(actual, expect)
+
+    inlineStyler = new InlineStyler('width:50px; height: 50px', {
+        spaceAfterColon: false,
+        spaceAfterSemiColon: false,
+        trailingSemiColon: false
+    })
+
+    actual = inlineStyler.toString()
+    expect = 'width:50px;height:50px'
+    assert.equal(actual, expect)
   })
 })
