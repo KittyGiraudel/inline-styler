@@ -7,15 +7,15 @@
   "homepage": "https://github.com/HugoGiraudel/inline-styler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HugoGiraudel/inline-styler/issues"
+    "url": "https://github.com/KittyGiraudel/inline-styler/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HugoGiraudel/iframify.git"
+    "url": "git+https://github.com/KittyGiraudel/iframify.git"
   },
   "author": {
-    "name": "Hugo Giraudel",
-    "url": "http://hugogiraudel.com"
+    "name": "Kitty Giraudel",
+    "url": "https://kittygiraudel.com"
   },
   "main": "index.js",
   "scripts": {
