@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "description": "A lightweight interface to manipulate the style attribute",
   "keywords": ["style", "inline", "attribute", "css"],
-  "homepage": "https://github.com/HugoGiraudel/inline-styler",
+  "homepage": "https://github.com/KittyGiraudel/inline-styler",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KittyGiraudel/inline-styler/issues"
